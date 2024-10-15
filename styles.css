@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    font-family: "JetBrains Mono", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./bg.jpg) no-repeat center center/cover;
+    min-height: 100vh;
+}
+
+body .box {
+    position: relative;
+}
+
+.container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.container .calculadora {
+    position: relative;
+    display: grid;
+}
+
+.container .calculadora .value {
+    grid-column: span 4;
+    height: 140px;
+    width: 300px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 30px;
+    background: transparent;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container .calculadora span {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 75px;
+    width: 85px;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.5s;
+}
+
+.container .calculadora span:hover {
+    transition: 0s;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.container .calculadora span:active {
+    background: #f4b161;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.container .calculadora .clear {
+    grid-column: span 2;
+    width: 150px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.container .calculadora .plus {
+    grid-row: span 2;
+    height: 150px;
+}
+
+.container .calculadora .equal {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+@media screen and (max-width: 768px) {
+    body::before {
+        max-width: 75vw;
+        max-height: 75vw;
+    }
+}
